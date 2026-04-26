@@ -1,0 +1,18 @@
+{
+	"type": "APL",
+	"version": "2024.3",
+	"theme": "dark",
+	"import": [
+		{ "name": "alexa-layouts", "version": "1.7.0" }
+	],
+	"mainTemplate": {
+		"items": [
+			{
+				"type": "AlexaHeadline",
+				"backgroundColor": "#1f2937",
+				"primaryText": "Jeedom",
+				"secondaryText": "Chargement du tableau de bord…"
+			}
+		]
+	}
+}

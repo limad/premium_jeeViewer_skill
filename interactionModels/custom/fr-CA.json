@@ -1,0 +1,56 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "afficheur jeedom",
+			"intents": [
+				{ "name": "AMAZON.CancelIntent",       "samples": [] },
+				{ "name": "AMAZON.HelpIntent",         "samples": [] },
+				{ "name": "AMAZON.StopIntent",         "samples": [] },
+				{ "name": "AMAZON.NavigateHomeIntent", "samples": [] },
+				{ "name": "AMAZON.FallbackIntent",     "samples": [] },
+				{
+					"name": "OpenObjectIntent",
+					"slots": [
+						{
+							"name": "ObjectName",
+							"type": "AMAZON.SearchQuery",
+							"samples": []
+						}
+					],
+					"samples": [
+						"affiche {ObjectName}",
+						"affiche la {ObjectName}",
+						"affiche le {ObjectName}",
+						"affiche les {ObjectName}",
+						"montre {ObjectName}",
+						"montre la {ObjectName}",
+						"montre le {ObjectName}",
+						"montre moi {ObjectName}",
+						"ouvre {ObjectName}",
+						"ouvre la {ObjectName}",
+						"ouvre le {ObjectName}",
+						"ouvre la page {ObjectName}",
+						"affiche la pièce {ObjectName}",
+						"montre la pièce {ObjectName}",
+						"vue de {ObjectName}",
+						"vue de la {ObjectName}",
+						"vue du {ObjectName}"
+					]
+				},
+				{
+					"name": "OpenPageIntent",
+					"slots": [
+						{ "name": "page", "type": "AMAZON.NUMBER" }
+					],
+					"samples": [
+						"ouvre page {page}",
+						"affiche page {page}",
+						"page {page}",
+						"objet numéro {page}"
+					]
+				}
+			],
+			"types": []
+		}
+	}
+}

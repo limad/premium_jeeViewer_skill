@@ -1,0 +1,18 @@
+{
+	"type": "APL",
+	"version": "2024.3",
+	"theme": "dark",
+	"import": [
+		{ "name": "alexa-layouts", "version": "1.7.0" }
+	],
+	"mainTemplate": {
+		"items": [
+			{
+				"type": "Container",
+				"width": "100vw",
+				"height": "100vh",
+				"backgroundColor": "#000000"
+			}
+		]
+	}
+}
