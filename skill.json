@@ -6,18 +6,13 @@
 				"endpoint": {
 					"uri": "arn:aws:lambda:eu-west-1:571600828883:function:placeholder:Release_0"
 				},
+				"regions": {
+					"EU": { "endpoint": { "uri": "arn:aws:lambda:eu-west-1:571600828883:function:placeholder:Release_0" } },
+					"NA": { "endpoint": { "uri": "arn:aws:lambda:us-east-1:571600828883:function:placeholder:Release_0" } },
+					"FE": { "endpoint": { "uri": "arn:aws:lambda:us-west-2:571600828883:function:placeholder:Release_0" } }
+				},
 				"interfaces": [
-					{
-						"type": "ALEXA_PRESENTATION_APL",
-						"supportedViewports": [
-							{ "mode": "HUB", "shape": "RECTANGLE", "minWidth":  600, "maxWidth": 1279, "minHeight": 600, "maxHeight":  959 },
-							{ "mode": "HUB", "shape": "RECTANGLE", "minWidth": 1280, "maxWidth": 1920, "minHeight": 600, "maxHeight": 1279 },
-							{ "mode": "HUB", "shape": "RECTANGLE", "minWidth": 1920, "maxWidth": 2560, "minHeight": 960, "maxHeight": 1279 },
-							{ "mode": "HUB", "shape": "RECTANGLE", "minWidth":  960, "maxWidth": 1279, "minHeight": 100, "maxHeight":  599 },
-							{ "mode": "HUB", "shape": "ROUND",     "minWidth":  100, "maxWidth":  599, "minHeight": 100, "maxHeight":  599 },
-							{ "mode": "TV",  "shape": "RECTANGLE", "minWidth":  960, "maxWidth":  960, "minHeight": 540, "maxHeight":  540 }
-						]
-					}
+					{ "type": "ALEXA_PRESENTATION_APL" }
 				]
 			}
 		},
@@ -27,40 +22,28 @@
 			},
 			"locales": {
 				"fr-FR": {
-					"description": "Affiche votre tableau de bord Jeedom sur les appareils Echo Show, Echo Hub et Fire TV. Demandez à Alexa d'ouvrir une pièce, vous voyez l'état de tous vos équipements à l'écran.",
+					"description": "Affiche votre tableau de bord Jeedom sur les appareils Alexa avec écran (Echo Show, Hub, Fire TV).",
 					"examplePhrases": [
 						"Alexa, ouvre afficheur jeedom",
 						"Alexa, demande à afficheur jeedom d'ouvrir la cuisine",
 						"Alexa, demande à afficheur jeedom de montrer le salon"
 					],
-					"keywords": ["jeedom", "dashboard", "viewer", "domotique", "afficheur"],
-					"name": "AlexaPremium JeeViewer",
-					"summary": "Afficheur Jeedom pour appareils Alexa avec écran"
+					"keywords": [],
+					"name": "AlexaPremium_JeeViewer",
+					"summary": "Afficheur Jeedom pour Alexa"
 				},
 				"fr-CA": {
-					"description": "Affiche votre tableau de bord Jeedom sur les appareils Echo Show, Echo Hub et Fire TV. Demandez à Alexa d'ouvrir une pièce, vous voyez l'état de tous vos équipements à l'écran.",
+					"description": "Affiche votre tableau de bord Jeedom sur les appareils Alexa avec écran (Echo Show, Hub, Fire TV).",
 					"examplePhrases": [
 						"Alexa, ouvre afficheur jeedom",
 						"Alexa, demande à afficheur jeedom d'ouvrir la cuisine",
 						"Alexa, demande à afficheur jeedom de montrer le salon"
 					],
-					"keywords": ["jeedom", "dashboard", "viewer", "domotique", "afficheur"],
-					"name": "AlexaPremium JeeViewer",
-					"summary": "Afficheur Jeedom pour appareils Alexa avec écran"
+					"keywords": [],
+					"name": "AlexaPremium_JeeViewer",
+					"summary": "Afficheur Jeedom pour Alexa"
 				}
-			},
-			"isAvailableWorldwide": false,
-			"distributionCountries": ["FR", "BE", "CA"],
-			"category": "PRODUCTIVITY",
-			"distributionMode": "PUBLIC",
-			"testingInstructions": "Skill auto-déployé par chaque utilisateur Jeedom avec son propre endpoint Lambda Alexa-hosted. Nécessite le plugin alexaapiv2 sur Jeedom."
-		},
-		"privacyAndCompliance": {
-			"allowsPurchases": false,
-			"isExportCompliant": true,
-			"isChildDirected": false,
-			"usesPersonalInfo": false,
-			"containsAds": false
+			}
 		}
 	}
 }
