@@ -4,12 +4,12 @@
 		"apis": {
 			"custom": {
 				"endpoint": {
-					"uri": "arn:aws:lambda:eu-west-1:571600828883:function:placeholder:Release_0"
+					"uri": "arn:aws:lambda:eu-west-1:571600828883:function:33006444-3f6b-4bbb-9946-378e535f5288:Release_0"
 				},
 				"regions": {
-					"EU": { "endpoint": { "uri": "arn:aws:lambda:eu-west-1:571600828883:function:placeholder:Release_0" } },
-					"NA": { "endpoint": { "uri": "arn:aws:lambda:us-east-1:571600828883:function:placeholder:Release_0" } },
-					"FE": { "endpoint": { "uri": "arn:aws:lambda:us-west-2:571600828883:function:placeholder:Release_0" } }
+					"EU": { "endpoint": { "uri": "arn:aws:lambda:eu-west-1:571600828883:function:33006444-3f6b-4bbb-9946-378e535f5288:Release_0" } },
+					"NA": { "endpoint": { "uri": "arn:aws:lambda:us-east-1:571600828883:function:33006444-3f6b-4bbb-9946-378e535f5288:Release_0" } },
+					"FE": { "endpoint": { "uri": "arn:aws:lambda:us-west-2:571600828883:function:33006444-3f6b-4bbb-9946-378e535f5288:Release_0" } }
 				},
 				"interfaces": [
 					{ "type": "ALEXA_PRESENTATION_APL" }
