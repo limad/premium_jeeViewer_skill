@@ -4,7 +4,7 @@
 		"apis": {
 			"custom": {
 				"endpoint": {
-					"uri": "{{LAMBDA_ARN}}"
+					"uri": "arn:aws:lambda:eu-west-1:571600828883:function:placeholder:Release_0"
 				},
 				"interfaces": [
 					{
@@ -60,13 +60,7 @@
 			"isExportCompliant": true,
 			"isChildDirected": false,
 			"usesPersonalInfo": false,
-			"containsAds": false,
-			"locales": {
-				"fr-FR": {
-					"privacyPolicyUrl": "{{PRIVACY_URL}}",
-					"termsOfUseUrl":   "{{TOS_URL}}"
-				}
-			}
+			"containsAds": false
 		}
 	}
 }

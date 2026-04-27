@@ -1,7 +1,12 @@
-# Configuration injectée par le plugin alexaapiv2 lors du déploiement.
-# Ne PAS modifier manuellement — réécrit à chaque deployJeeViewerSkill.
+# Configuration du skill JeeViewer.
+#
+# Ces valeurs par défaut sont valides en Python pur (le repo doit être clonable
+# et exécutable par Amazon Alexa-hosted lors du provisioning).
+#
+# Lors du déploiement par le plugin alexaapiv2, ce fichier est réécrit avec
+# les valeurs réelles via devSkill::updateHostedSkillFile.
 
-JEEDOM_URL  = "{{JEEDOM_URL}}"     # ex: "https://jeedom.example.com"
-APIKEY      = "{{APIKEY}}"          # apikey du plugin alexaapiv2
-DEBUG       = {{DEBUG}}             # True / False (sans guillemets — booléen Python)
-VERIFY_SSL  = {{VERIFY_SSL}}        # idem
+JEEDOM_URL  = ""        # remplacé au déploiement par https://jeedom.example.com
+APIKEY      = ""        # remplacé au déploiement par l'apikey alexaapiv2
+DEBUG       = False     # True / False
+VERIFY_SSL  = True      # True / False
