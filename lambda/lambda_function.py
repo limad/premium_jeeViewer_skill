@@ -15,9 +15,12 @@
 # L'endpoint Jeedom (jeeViewer.php) gère l'auto-login via l'apikey du plugin —
 # plus besoin du plugin tiers "autologin".
 
+import hashlib
+import hmac
 import json
 import logging
 import os
+import time
 import urllib.parse
 
 import ask_sdk_core.utils as ask_utils
@@ -61,9 +64,28 @@ def _viewport_mode(handler_input):
     return "desktop"
 
 
+def _sign_url_params(t, view, object_id, object_name):
+    """
+    HMAC-SHA256 sur les paramètres + timestamp.
+    Doit matcher jeeViewer.php :
+        payload = "{t}|{view}|{object_id}|{object_name}"
+        secret  = APIKEY  (apikey du plugin alexaapiv2)
+    L'apikey n'est JAMAIS dans l'URL — elle reste secrète côté Lambda.
+    """
+    payload = f"{t}|{view}|{object_id or ''}|{object_name or ''}"
+    return hmac.new(
+        APIKEY.encode("utf-8"),
+        payload.encode("utf-8"),
+        hashlib.sha256,
+    ).hexdigest()
+
+
 def _build_url(handler_input, object_name=None, object_id=None):
-    """Construit l'URL jeeViewer.php avec apikey + paramètres."""
-    params = {"apikey": APIKEY, "view": _viewport_mode(handler_input)}
+    """Construit l'URL jeeViewer.php signée HMAC (fenêtre de validité 60s)."""
+    view = _viewport_mode(handler_input)
+    t    = str(int(time.time()))
+    sig  = _sign_url_params(t, view, object_id, object_name)
+    params = {"t": t, "view": view, "sig": sig}
     if object_name:
         params["object_name"] = object_name
     elif object_id:
